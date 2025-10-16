@@ -33,14 +33,45 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+UP COUNTER
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 
-Developed by: RegisterNumber:
+DOWN COUNTER
+module ex12(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule
+
+Developed by:A.DIVYA
+RegisterNumber:25014362
 */
 
 **RTL LOGIC UP COUNTER**
+<img width="368" height="178" alt="image" src="https://github.com/user-attachments/assets/fb4ebea8-c9bf-4cff-971d-8dfb93b2443e" />
 
 **TIMING DIAGRAM FOR IP COUNTER**
+<img width="396" height="171" alt="image" src="https://github.com/user-attachments/assets/2859e129-a6ab-45fd-930b-7d87c58ff86a" />
 
 **TRUTH TABLE**
+<img width="1220" height="172" alt="image" src="https://github.com/user-attachments/assets/532fc5b9-85ff-43b7-bfca-25a5ac3104f7" />
+<img width="1212" height="198" alt="image" src="https://github.com/user-attachments/assets/8ba4f0ed-e2d1-46f5-bf2d-0cd64569e41a" />
 
 **RESULTS**
+THUS THE CODING IS WRITTEN AND THE OUTPUT IS VERIFIED
